@@ -1,25 +1,107 @@
-# Laravel + Vue Starter Kit
+# Wardrobe Management Job Application
 
-## Introduction
+## Overview
+Wardrobe Management is a job application web app designed to help users manage their clothing items while integrating essential job application features. This project includes authentication, profile management, and clothing inventory tracking with a user-friendly interface.
 
-Our Vue starter kit provides a robust, modern starting point for building Laravel applications with a Vue frontend using [Inertia](https://inertiajs.com).
+## Features Implemented
 
-Inertia allows you to build modern, single-page Vue applications using classic server-side routing and controllers. This lets you enjoy the frontend power of Vue combined with the incredible backend productivity of Laravel and lightning-fast Vite compilation.
+### 1. **Authentication (Login & Register)**
+- Users can register an account and log in securely.
+- Authentication is handled using modern security best practices.
+- Session management ensures a seamless experience across sessions.
 
-This Vue starter kit utilizes Vue 3 and the Composition API, TypeScript, Tailwind, and the [shadcn-vue](https://www.shadcn-vue.com) component library.
+### 2. **Clothing Items Management**
+- Users can add, edit, and delete clothing items.
+- Items can be categorized by type (e.g., tops, bottoms, shoes, accessories).
+- A search and filter functionality allows users to find specific clothing items.
 
-## Official Documentation
+### 3. **Profile Management**
+- Users can update their personal details.
+- A profile page provides access to account settings.
 
-Documentation for all Laravel starter kits can be found on the [Laravel website](https://laravel.com/docs/starter-kits).
+### 4. **MySQL Database Integration**
+- MySQL is used to store user accounts, clothing items, and other relevant data.
+- Database interactions are handled efficiently to ensure fast response times.
 
-## Contributing
+### 5. **Dark Mode Support**
+- The UI features dark mode with improved contrast for better readability.
+- Bright text colors complement the dark mode for an enhanced user experience.
 
-Thank you for considering contributing to our starter kit! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 6. **Responsive Design**
+- The app is fully responsive, ensuring a seamless experience on both desktop and mobile devices.
 
-## Code of Conduct
+## Tech Stack Used
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- **Frontend:** Vue.js (Vue 3 with Composition API)
+- **Backend:** Laravel (for API and authentication)
+- **Database:** MySQL
+- **Routing & State Management:** Inertia.js & Vue Router
+- **Styling:** Tailwind CSS for a modern and clean UI
+- **Authentication:** Laravel Sanctum for secure authentication
 
-## License
+## Installation and Running the Project
 
-The Laravel + Vue starter kit is open-sourced software licensed under the MIT license.
+### Prerequisites
+Ensure you have the following installed:
+- Node.js & npm
+- PHP & Composer
+- MySQL Database
+
+### Setup Instructions
+
+1. **Clone the Repository**
+   ```sh
+   git clone https://github.com/your-repository.git
+   cd your-repository
+   ```
+
+2. **Install Backend Dependencies**
+   ```sh
+   composer install
+   ```
+
+3. **Set Up Environment Variables**
+   - Copy `.env.example` to `.env`
+   ```sh
+   cp .env.example .env
+   ```
+   - Update database credentials in `.env`
+   ```env
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=your_database_name
+   DB_USERNAME=your_username
+   DB_PASSWORD=your_password
+   ```
+
+4. **Run Migrations**
+   ```sh
+   php artisan migrate --seed
+   ```
+
+5. **Install Frontend Dependencies**
+   ```sh
+   npm install
+   ```
+
+6. **Build and Run the Application**
+   ```sh
+   npm run dev
+   php artisan serve
+   ```
+
+7. **Access the Application**
+   Open your browser and visit:
+   ```
+   http://127.0.0.1:8000
+   ```
+
+## Screenshots
+Screenshots of the different screens have been added to the project to showcase the UI and functionality.
+
+## Conclusion
+This project is a fully functional wardrobe management application integrated with job application features. With authentication, profile management, and a MySQL-backed database, users can efficiently manage their clothing inventory. 
+
+For any issues, feel free to open a discussion or raise an issue in the repository. 🚀
+
