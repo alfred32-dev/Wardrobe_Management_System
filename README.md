@@ -1,4 +1,4 @@
-# Wardrobe Management Job Application
+# Wardrobe Management System
 
 ## Overview
 Wardrobe Management is a job application web app designed to help users manage their clothing items while integrating essential job application features. This project includes authentication, profile management, and clothing inventory tracking with a user-friendly interface.
