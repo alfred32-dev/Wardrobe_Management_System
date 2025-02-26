@@ -103,5 +103,7 @@ Screenshots of the different screens have been added to the project to showcase 
 ## Conclusion
 This project is a fully functional wardrobe management application integrated with job application features. With authentication, profile management, and a MySQL-backed database, users can efficiently manage their clothing inventory. 
 
-For any issues, feel free to open a discussion or raise an issue in the repository. 🚀
+The project is developed to meet all the requirements of the Software Developer Itern Application at Uzapoint Limited. 
+
+
 
