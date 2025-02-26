@@ -10,6 +10,7 @@ use App\Http\Controllers\Auth\ConfirmablePasswordController;
 use App\Http\Controllers\Auth\EmailVerificationNotificationController;
 use App\Http\Controllers\Auth\PasswordController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ClothingController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -52,9 +53,12 @@ Route::middleware('guest')->group(function () {
 
 // 🛠️ Authenticated User Routes
 Route::middleware('auth')->group(function () {
-    Route::get('/dashboard', function () {
-        return Inertia::render('Dashboard');
-    })->name('dashboard');
+   
+
+    Route::get('/dashboard', [ClothingController::class, 'index'])->name('dashboard');
+    Route::post('/clothing', [ClothingController::class, 'store']);
+    Route::put('/clothing/{clothing}', [ClothingController::class, 'update']);
+    Route::delete('/clothing/{clothing}', [ClothingController::class, 'destroy']);
 
     Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
 
@@ -73,4 +77,5 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
 });
