@@ -87,15 +87,15 @@ const editItem = (item) => {
 
             <!-- Search & Filters -->
             <div class="flex gap-4 mt-4">
-                <input v-model="search" placeholder="Search" class="w-1/3 p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
-                <select v-model="category" class="p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                <input v-model="search" placeholder="Search" class="w-1/2 p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600" />
+                <select v-model="category" class="w-1/3 p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600">
                     <option value="">All Categories</option>
                     <option>Tops</option>
                     <option>Bottoms</option>
                     <option>Shoes</option>
                     <option>Accessories</option>
                 </select>
-                <select v-model="outfit" class="p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                <select v-model="outfit" class="w-1/3 p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600">
                     <option value="">All Outfits</option>
                     <option>Football</option>
                     <option>Church</option>
@@ -107,19 +107,19 @@ const editItem = (item) => {
             <!-- Add / Edit Item Form -->
             <form @submit.prevent="submit" class="mt-6 p-4 border rounded-md bg-gray-50 dark:bg-gray-700">
                 <div class="grid grid-cols-2 gap-4">
-                    <input v-model="form.name" placeholder="Item Name" class="p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" required />
-                    <select v-model="form.category" class="p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" required>
+                    <input v-model="form.name" placeholder="Item Name" class="p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600" required />
+                    <select v-model="form.category" class="p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600" required>
                         <option>Tops</option>
                         <option>Bottoms</option>
                         <option>Shoes</option>
                         <option>Accessories</option>
                     </select>
-                    <input v-model="form.size" placeholder="Size" class="p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
-                    <input v-model="form.color" placeholder="Color" class="p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
-                    <input v-model="form.brand" placeholder="Brand" class="p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
-                    <input v-model="form.price" placeholder="Price" type="number" class="p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
-                    <input v-model="form.image_url" placeholder="Image URL" class="p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
-                    <select v-model="form.outfit" class="p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                    <input v-model="form.size" placeholder="Size" class="p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600" />
+                    <input v-model="form.color" placeholder="Color" class="p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600" />
+                    <input v-model="form.brand" placeholder="Brand" class="p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600" />
+                    <input v-model="form.price" placeholder="Price" type="number" class="p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600" />
+                    <input v-model="form.image_url" placeholder="Image URL" class="p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600" />
+                    <select v-model="form.outfit" class="p-2 border rounded-md dark:bg-gray-700 dark:border-gray-600">
                         <option>Football</option>
                         <option>Church</option>
                         <option>Work</option>
@@ -130,7 +130,6 @@ const editItem = (item) => {
                     {{ form.id ? 'Update' : 'Add' }} Item
                 </button>
             </form>
-
             <!-- Items List -->
             <div class="mt-6 overflow-auto">
                 <table class="w-full border-collapse border border-gray-300 dark:border-gray-600">
@@ -147,7 +146,7 @@ const editItem = (item) => {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr v-for="item in clothingItems" :key="item.id" class="text-center bg-white dark:bg-gray-800">
+                        <tr v-for="item in clothingItems" :key="item.id" class="text-center bg-white dark:bg-gray-800 text-white">
                             <td class="border p-2">{{ item.name }}</td>
                             <td class="border p-2">{{ item.category }}</td>
                             <td class="border p-2">{{ item.size }}</td>
@@ -170,3 +169,4 @@ const editItem = (item) => {
         </div>
     </div>
 </template>
+
